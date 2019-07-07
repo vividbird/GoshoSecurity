@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GoshoSecurity.Views.SelectPhotoPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="In this section you can upload photos for your security system from your gallery"
+                Margin="150,50,150,18"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <Image x:Name="selectedImage" Margin="100,50,100,18"/>
+            <Button x:Name="uploadButton" Text="Upload" WidthRequest="200" CornerRadius="30" BackgroundColor="#9FD1E4" VerticalOptions="Center" HorizontalOptions="Center" Clicked="UploadPhoto_Clicked" />
+            <Button Text="Select image" WidthRequest="200" CornerRadius="30" BackgroundColor="#9FD1E4" VerticalOptions="Center" HorizontalOptions="Center" Clicked="SelectImageButton_Clicked" />
+            <Button Text="Take photo" WidthRequest="200" CornerRadius="30" BackgroundColor="#9FD1E4" VerticalOptions="Center" HorizontalOptions="Center" Clicked="TakePhotoButton_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

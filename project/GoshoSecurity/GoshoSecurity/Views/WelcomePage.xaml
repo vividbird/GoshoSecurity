@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GoshoSecurity.Views.WelcomePage">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Image HeightRequest="200" WidthRequest="200" Margin="100,40,100,18" Source="https://www.freelogodesign.org/file/app/client/thumb/fa67f54e-f956-48b5-8d09-96604d9972f1_200x200.png" />
+            <Label x:Name="welcomeBackLabel" Text="Welcome back to Gosho Security" HorizontalOptions="Center" VerticalOptions="Center" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

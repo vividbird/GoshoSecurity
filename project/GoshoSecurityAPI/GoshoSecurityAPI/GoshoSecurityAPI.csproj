@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>3aec2c69-461f-4262-b4c0-0ee460e67a8d</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Azure.CognitiveServices.Vision.Face" Version="2.4.0-preview" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GoshoSecurity.Data\GoshoSecurity.Data.csproj" />
+    <ProjectReference Include="..\GoshoSecurity.Infrastructure\GoshoSecurity.Infrastructure.csproj" />
+    <ProjectReference Include="..\GoshoSecurity.Models\GoshoSecurity.Models.csproj" />
+    <ProjectReference Include="..\GoshoSecurity.Services\GoshoSecurity.Services.csproj" />
+  </ItemGroup>
+
+</Project>

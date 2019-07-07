@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GoshoSecurity.Views.ChangeUserInfo">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image HeightRequest="200" WidthRequest="200" Margin="100,50,100,18" Source="https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png" />
+            <Entry x:Name="username" Margin="100,8,100,18" HorizontalTextAlignment="Center" Placeholder="Name" IsEnabled="False"/>
+            <Entry x:Name="nameEntry" Margin="100,8,100,18" HorizontalTextAlignment="Center" Placeholder="Name"/>
+            <Entry x:Name="emailEntry" Margin="100,8,100,18" HorizontalTextAlignment="Center" Placeholder="Email"/>
+            <Button Text="Change info" WidthRequest="200" Margin="100,8,100,18" CornerRadius="30" BackgroundColor="#9FD1E4" VerticalOptions="Center" HorizontalOptions="Center" Clicked="Button_Clicked" />
+            <Label TextColor="Red" HorizontalOptions="Center" HorizontalTextAlignment="Center" x:Name="messageLabel"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

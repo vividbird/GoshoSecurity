@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
+             xmlns:controls="clr-namespace:PanCardView.Controls;assembly=PanCardView"
+             x:Class="GoshoSecurity.Views.PhotosPage"
+             Title="Your photos">
+    <ContentPage.Content>
+       
+        <cards:CarouselView 
+   x:Name="listView"
+    SelectedIndex="{Binding CurrentIndex}">
+            <cards:CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <ContentView>
+                        <Frame 
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    HeightRequest="300"
+                    WidthRequest="300"
+                    Padding="0" 
+                    HasShadow="false"
+                    IsClippedToBounds="true"
+                    CornerRadius="10"
+                    BackgroundColor="Black">
+
+                            <Image Source="{Binding Url}"/>
+
+                        </Frame>
+                    </ContentView>
+                </DataTemplate>
+            </cards:CarouselView.ItemTemplate>
+
+            <controls:LeftArrowControl/>
+            <controls:RightArrowControl/>
+            <controls:IndicatorsControl/>
+            
+            <Button x:Name="deleteButton" Text="Delete" WidthRequest="200" Margin="100,50,100,18" CornerRadius="30" BackgroundColor="#9FD1E4" VerticalOptions="Center" HorizontalOptions="Center" Clicked="DeleteButton_Clicked" />
+
+        </cards:CarouselView>
+        
+    </ContentPage.Content>
+</ContentPage>

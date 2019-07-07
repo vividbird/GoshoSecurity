@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GoshoSecurity.CS.Models"
+             xmlns:pages="clr-namespace:GoshoSecurity.Views"
+             x:Class="GoshoSecurity.Views.MasterPage"
+             Title="Gosho Security">
+    <StackLayout>
+        <ListView x:Name="listView" x:FieldModifier="public">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type local:MasterPageItem}">
+                    <local:MasterPageItem Title="Welcome Page" IconSource="" TargetType="{x:Type pages:WelcomePage}" />
+                    <local:MasterPageItem Title="My photos" IconSource="https://cdn3.iconfinder.com/data/icons/faticons/32/picture-01-512.png" TargetType="{x:Type pages:PhotosPage}" />
+                    <local:MasterPageItem Title="Upload photo" IconSource="http://www.pngall.com/wp-content/uploads/2/Upload-PNG-Images.png" TargetType="{x:Type pages:SelectPhotoPage}" />
+                    <local:MasterPageItem Title="Change user info" IconSource="https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png" TargetType="{x:Type pages:ChangeUserInfo}" />
+                    <local:MasterPageItem Title="Change password" IconSource="https://img.icons8.com/plasticine/2x/password.png" TargetType="{x:Type pages:PasswordChangePage}" />
+                    <local:MasterPageItem Title="Log out" IconSource="https://www.sccpre.cat/mypng/full/0-3357_oojs-ui-icon-logout-ltr-progressive-log-out.png" TargetType="{x:Type pages:LoginPage}" />
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding IconSource}" />
+                            <Label Grid.Column="1" Text="{Binding Title}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

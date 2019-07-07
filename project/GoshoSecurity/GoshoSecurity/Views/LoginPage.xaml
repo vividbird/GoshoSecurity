@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GoshoSecurity.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image HeightRequest="200" WidthRequest="200" Margin="100,50,100,18" Source="https://www.freelogodesign.org/file/app/client/thumb/fa67f54e-f956-48b5-8d09-96604d9972f1_200x200.png" />
+            <Entry x:Name="usernameEntry" Margin="100,8,100,18" HorizontalTextAlignment="Center" Placeholder="Username"/>
+            <Entry x:Name="passwordEntry" Margin="100,8,100,18" HorizontalTextAlignment="Center" Placeholder="Password" IsPassword="true"/>
+            <Button Text="Login" WidthRequest="200" Margin="100,50,100,18" CornerRadius="30" BackgroundColor="#9FD1E4" VerticalOptions="Center" HorizontalOptions="Center" Clicked="LoginButton_Clicked" />
+            <Label TextColor="Red" HorizontalOptions="Center" HorizontalTextAlignment="Center" x:Name="messageLabel"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
